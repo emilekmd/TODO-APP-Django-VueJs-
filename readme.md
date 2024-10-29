@@ -10,7 +10,9 @@
 
 ## Account feature
 
-[] Register  
+[x] create simple user
+[x] create super user
+[] Register
 [] Login  
 [] Logout  
 
