@@ -14,7 +14,6 @@ class CustomUserManager(BaseUserManager):
     def create_superuser(self, email='prodmai@gmail.com', password=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
-        print('ok')
         return self.create_user(email, password, **extra_fields)
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
@@ -22,8 +21,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     password = models.CharField(max_length=127,null=False)
+    token =models.CharField(max_length=255,blank=True, null=True, default="")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    is_authenticated = models.BooleanField(default=False)
     
     objects = CustomUserManager()
     
