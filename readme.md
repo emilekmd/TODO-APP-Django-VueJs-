@@ -3,7 +3,7 @@
 ## Todo feature
 
 [x] Create a task  
-[x] Read all tasks
+[x] Read all tasks  
 [x] Read one task  
 [x] Update a task  
 [x] Delete a task  
