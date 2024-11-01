@@ -32,4 +32,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = []  
     
     def __str__(self):
-        return self.first_name
+        return f"{self.first_name}--{self.pk}"
